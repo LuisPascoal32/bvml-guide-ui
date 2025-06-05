@@ -27,6 +27,9 @@ jobs:
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href=/bvml-guide-ui/
 
+      - name: Copy index.html to 404.html for SPA fallback
+        run: cp ./dist/bvml-guide-ui/browser/index.html ./dist/bvml-guide-ui/browser/404.html
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:

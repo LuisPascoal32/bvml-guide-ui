@@ -15,6 +15,8 @@
       "prefix": "app",
       "architect": {
         "build": {
+          "serviceWorker": true,
+          "ngswConfigPath": "ngsw-config.json",
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
@@ -49,7 +51,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
