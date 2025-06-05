@@ -1,0 +1,8 @@
+<div class="gallery">
+    @for(img of images; track $index) {
+    <div class="element">
+        <img [src]="img.path" (click)="openImage(img.path)" alt="Thumbnail" class="thumbnail" />
+        <h4>{{img.title}}</h4>
+    </div>
+    }
+</div>
