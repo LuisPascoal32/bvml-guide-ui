@@ -1,19 +1,12 @@
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+.full-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.dialog-content {
   padding: 1rem;
-}
-
-.thumbnail {
-  width: 150px;
-  height: 100px;
-  object-fit: cover;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: transform 0.3s;
-}
-
-.thumbnail:hover {
-  transform: scale(1.05);
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: auto;
 }

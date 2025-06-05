@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
@@ -27,12 +27,24 @@ import { RouterModule } from '@angular/router';
   ]
 })
 export class AppComponent {
-  isHandset: boolean = false;
+@ViewChild('sidenav') sidenav!: MatSidenav;
+  isSmallScreen = false;
 
-   constructor(private breakpointObserver: BreakpointObserver) {
-    this.breakpointObserver.observe([Breakpoints.Handset])
-      .subscribe(result => {
-        this.isHandset = result.matches;
-      });
+  
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit(): void {
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.isSmallScreen = result.matches;
+      if (this.isSmallScreen) {
+        this.sidenav?.close();
+      } else {
+        this.sidenav?.open();
+      }
+    });
+  }
+
+  toggleSidebar(): void {
+    this.sidenav.toggle();
   }
 }

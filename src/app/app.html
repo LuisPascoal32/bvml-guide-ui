@@ -1,30 +1,24 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-               [attr.role]="isHandset ? 'dialog' : 'navigation'"
-               [mode]="isHandset ? 'over' : 'side'"
-               [opened]="!isHandset">
-    <mat-toolbar routerLink="/">Menu</mat-toolbar>
+  <mat-sidenav #sidenav [mode]="isSmallScreen ? 'over' : 'side'" [opened]="!isSmallScreen" class="sidenav">
     <mat-nav-list>
-      <a mat-list-item routerLink="/">Home</a>
-      <span class="menu-prefix">Incêndios Urbanos/Industriais</span>
-      <a mat-list-item routerLink="/about">About</a>
-      <span class="menu-prefix">Incêndios Rurais</span>
-      <a mat-list-item routerLink="/contact">Contact</a>
-      <span class="menu-prefix">Desencarceramento</span>
-      <a mat-list-item routerLink="/contact">Contact</a>
-      <span class="menu-prefix">Pré-Hospitalar</span>
-      <a mat-list-item routerLink="/contact">Contact</a>
-      <span class="menu-prefix">Específicos</span>
-      <a mat-list-item routerLink="/contact">Contact</a>
+      <a mat-list-item routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+        <span class="sidenav-item">Home</span>
+      </a>
+      <a mat-list-item routerLink="/about" routerLinkActive="active-link">
+        <span class="sidenav-item">Profile</span>
+      </a>
+      <a mat-list-item routerLink="/settings" routerLinkActive="active-link">
+        <span class="sidenav-item">Settings</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset">
+    <mat-toolbar class="toolbar">
+      <button *ngIf="isSmallScreen" mat-icon-button (click)="toggleSidebar()" aria-label="Toggle sidebar">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>B.V.Matosinhos-Leça (Guia de Bolço)</span>
+      <span>My Angular App</span>
     </mat-toolbar>
 
     <div class="content">

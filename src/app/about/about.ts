@@ -19,7 +19,7 @@ export class AboutComponent {
   openImage(imageUrl: string): void {
     this.dialog.open(ImageDialogComponent, {
       data: { imageUrl },
-      panelClass: 'custom-dialog-container'
+      panelClass: 'custom-dialog-container',
     });
   }
 }
