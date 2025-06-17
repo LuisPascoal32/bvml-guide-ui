@@ -1,0 +1,27 @@
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+}
+
+.thumbnail {
+  width: 270px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
