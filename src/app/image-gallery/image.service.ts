@@ -13,7 +13,7 @@ export interface ImageGroup {
 
 export const IMAGE_GROUPS: ImageGroup[] = [
   {
-    label: 'Fires',
+    label: 'Pré-Hospitalar',
     route: 'fires',
     images: [
       { title: 'Class A', path: 'assets/fires/class_A.jpg' },
@@ -21,24 +21,32 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     ],
   },
   {
-    label: 'Equipment',
-    route: 'equipment',
-    images: [
-      { title: 'Extinguisher', path: 'assets/equipment/extinguisher.jpg' },
-      { title: 'Hose', path: 'assets/equipment/hose.jpg' },
+    label: 'Urbanos/Industriais',
+    route: 'ui',
+    expanded: false,
+    children: [
+      {
+        label: 'Equipamento',
+        route: 'equipment',
+        images: [{ title: 'Câmara Térmica', path: 'assets/ui/equipment/camaraTermica.png' },
+                 { title: 'Multi Gás', path: 'assets/ui/equipment/multiGas.png' }
+        ],
+      },
     ],
   },
   {
-    label: 'Vehicles',
+    label: 'Especificos',
     route: 'vehicles',
     expanded: false,
     children: [
       {
-        label: 'Heavy',
+        label: 'HAZMAT',
         route: 'heavy',
         images: [{ title: 'h1', path: 'assets/vehicles/heavy/h1.jpg' }],
       },
-      { label: 'Light', route: 'light', images: [{ title: 'l1', path: 'assets/vehicles/light/l1.jpg' }]},
+      { label: '', 
+        route: 'light', 
+        images: [{ title: 'l1', path: 'assets/vehicles/light/l1.jpg' }]},
     ],
   },
 ];
