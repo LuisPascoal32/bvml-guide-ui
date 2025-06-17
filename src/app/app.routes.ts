@@ -1,6 +1,9 @@
 import { Routes } from '@angular/router';
-import { AboutComponent } from './about/about';
+import { ImageGalleryComponent } from './image-gallery/image-gallery';
 
 export const appRoutes: Routes = [
-  { path: 'about', component: AboutComponent },
+  { path: ':section/:subSection', component: ImageGalleryComponent },
+  { path: ':section', component: ImageGalleryComponent },
+  { path: '', redirectTo: 'equipment', pathMatch: 'full' },
+  { path: '**', redirectTo: 'equipment' },
 ];
