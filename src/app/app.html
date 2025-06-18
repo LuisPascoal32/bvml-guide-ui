@@ -1,17 +1,21 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav [mode]="isSmallScreen ? 'over' : 'side'" [opened]="!isSmallScreen" class="sidenav">
+  <mat-sidenav
+    #sidenav
+    [mode]="isSmallScreen ? 'over' : 'side'"
+    [opened]="!isSmallScreen"
+    class="sidenav"
+  >
     <mat-nav-list>
       <ng-container *ngFor="let item of navItems">
-
         <!-- Simple link (no children) -->
-        <a
+        <mat-list-item
           *ngIf="!item.children"
           mat-list-item
           [routerLink]="item.route"
           routerLinkActive="active-link"
         >
-          {{ item.label }}
-        </a>
+          <span class="sidenav-list-item">{{item.label}}</span>
+        </mat-list-item>
 
         <!-- Expansion panel for dropdown items -->
         <mat-expansion-panel *ngIf="item.children" [expanded]="item.expanded">
@@ -20,24 +24,27 @@
           </mat-expansion-panel-header>
 
           <ng-container *ngFor="let child of item.children">
-            <a
+            <mat-list-item
               mat-list-item
               [routerLink]="child.route"
               routerLinkActive="active-link"
             >
-              {{ child.label }}
-            </a>
+              <span class="sidenav-list-item">{{ child.label }}</span>
+            </mat-list-item>
           </ng-container>
         </mat-expansion-panel>
-
       </ng-container>
     </mat-nav-list>
   </mat-sidenav>
 
-
   <mat-sidenav-content>
     <mat-toolbar class="toolbar">
-      <button *ngIf="isSmallScreen" mat-icon-button (click)="toggleSidebar()" aria-label="Toggle sidebar">
+      <button
+        *ngIf="isSmallScreen"
+        mat-icon-button
+        (click)="toggleSidebar()"
+        aria-label="Toggle sidebar"
+      >
         <mat-icon>menu</mat-icon>
       </button>
       <span>Field Guide</span>
