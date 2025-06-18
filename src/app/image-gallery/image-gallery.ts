@@ -22,7 +22,7 @@ ngOnInit() {
 
     const section = IMAGE_GROUPS.find(s => s.route === sectionRoute);
     this.sectionHeader = section?.label;
-    
+
     const subSection = section?.children?.find(c => c.route === subSectionRoute);
     this.subSectionHeader = subSection?.label;
     // Get images from subsection if available, else from section, else empty array
