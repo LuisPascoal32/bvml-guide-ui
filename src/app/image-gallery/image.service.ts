@@ -14,10 +14,8 @@ export interface ImageGroup {
 export const IMAGE_GROUPS: ImageGroup[] = [
   {
     label: 'Pré-Hospitalar',
-    route: 'fires',
+    route: 'preHospitalar',
     images: [
-      { title: 'Class A', path: 'assets/fires/class_A.jpg' },
-      { title: 'Class B', path: 'assets/fires/class_B.jpg' },
     ],
   },
   {
@@ -29,24 +27,31 @@ export const IMAGE_GROUPS: ImageGroup[] = [
         label: 'Equipamento',
         route: 'equipment',
         images: [{ title: 'Câmara Térmica', path: 'assets/ui/equipment/camaraTermica.png' },
-                 { title: 'Multi Gás', path: 'assets/ui/equipment/multiGas.png' }
+                 { title: 'Multi Gás', path: 'assets/ui/equipment/multiGas.png' },
+                 { title: 'Multi Gás Alarme', path: 'assets/ui/equipment/multiGasAlarme.png' },
+                 { title: 'Multi Gás Valores Ref.', path: 'assets/ui/equipment/multiGasReferencia.png' }
         ],
+      },
+      {
+        label: 'Fuga Gás',
+        route: 'gasLeak',
+        images: [{ title: 'Fuga Gás (Conduta)', path: 'assets/ui/gasLeak/fugaGasConduta.png' }],
       },
     ],
   },
   {
-    label: 'Especificos',
-    route: 'vehicles',
+    label: 'Específicos',
+    route: 'specific',
     expanded: false,
     children: [
       {
         label: 'HAZMAT',
         route: 'heavy',
-        images: [{ title: 'h1', path: 'assets/vehicles/heavy/h1.jpg' }],
+        images: [
+          { title: '!!REGRAS!!', path: 'assets/specific/hazmat/hazmatRegras.png' },
+          { title: 'Intervenção(1)', path: 'assets/specific/hazmat/intervencao1Hazmat.png' },
+          { title: 'Intervenção(2)', path: 'assets/specific/hazmat/intervencao2Hazmat.png' }],
       },
-      { label: '', 
-        route: 'light', 
-        images: [{ title: 'l1', path: 'assets/vehicles/light/l1.jpg' }]},
     ],
   },
 ];
