@@ -11,7 +11,8 @@ import { IMAGE_GROUPS } from './image.service';
 })
 export class ImageGalleryComponent {
   images: any[] = [];
-
+  sectionHeader:any;
+  subSectionHeader:any;
   constructor(private dialog: MatDialog, private route: ActivatedRoute) {}
 
 ngOnInit() {
@@ -20,12 +21,16 @@ ngOnInit() {
     const subSectionRoute = params['subSection'];
 
     const section = IMAGE_GROUPS.find(s => s.route === sectionRoute);
+    this.sectionHeader = section?.label;
 
+    const subSection = section?.children?.find(c => c.route === subSectionRoute);
+    this.subSectionHeader = subSection?.label;
     // Get images from subsection if available, else from section, else empty array
     this.images = subSectionRoute
-      ? section?.children?.find(c => c.route === subSectionRoute)?.images ?? []
+      ? subSection?.images ?? []
       : section?.images ?? [];
   });
+
 }
 
   openImage(imageUrl: string): void {
