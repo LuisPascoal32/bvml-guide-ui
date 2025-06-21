@@ -1,0 +1,24 @@
+<mat-card class="checklist-container">
+  <h1>Equipment Checklist</h1>
+  <div class="progress-section">
+    <mat-progress-bar
+      mode="determinate"
+      [value]="progressValue"
+      color="accent"
+    ></mat-progress-bar>
+    <p>{{ selectedItems.size }} / {{ totalItems }} Completed</p>
+  </div>
+
+  <div *ngFor="let group of groups">
+    <h3>{{ group.title }}</h3>
+    <mat-selection-list>
+      <mat-list-option
+        *ngFor="let item of group.items"
+        [value]="item"
+        [selected]="isSelected(item)"
+        (click)="toggleItem(item)">
+        {{ item }}
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+</mat-card>
