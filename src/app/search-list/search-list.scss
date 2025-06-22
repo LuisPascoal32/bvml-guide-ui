@@ -1,0 +1,27 @@
+.search-list-container {
+  padding: 1rem;
+  background-color: white;
+
+  .search-field {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-field {
+    max-width: 100%; /* full width on mobile */
+  }
+
+  .item-container {
+    justify-content: center;
+  }
+}
