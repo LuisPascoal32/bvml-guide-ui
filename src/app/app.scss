@@ -29,6 +29,12 @@
   min-height: calc(100vh - 96px);
 }
 
+.headerimg {
+  width:35;
+  height:35; 
+  margin-right: 8px;
+} 
+
 @media (max-width: 768px) {
   .sidenav {
     width: 200px;
