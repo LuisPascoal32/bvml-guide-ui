@@ -7,16 +7,7 @@
 
   <div class="item-container">
     @for (item of filteredItems(); track $index) {
-      <mat-card class="item" role="button" tabindex="0">
-        <mat-card-content>
-          <div class="item-content">
-            <div class="item-text">{{ item.dangerCode }}</div>
-            <hr class="divider" />
-            <div class="item-text">{{ item.numberUN }}</div>
-          </div>
-        </mat-card-content>
-      </mat-card>
+      <app-plate [topValue]="item.dangerCode" [bottomValue]="item.numberUN"></app-plate>
     }
   </div>
-  <app-plate></app-plate>
 </mat-card>
