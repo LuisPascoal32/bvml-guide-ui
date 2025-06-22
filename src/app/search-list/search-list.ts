@@ -1,4 +1,3 @@
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -17,9 +16,8 @@ import { PlateComponent } from '../plate/plate';
     MatIconModule,
     MatInputModule,
     FormsModule,
-    NgIf,
     PlateComponent
-  ],
+  ]
 })
 export class SearchListComponent {
   constructor() {}
