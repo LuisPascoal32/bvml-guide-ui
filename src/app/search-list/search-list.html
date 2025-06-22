@@ -1,0 +1,22 @@
+<mat-card class="search-list-container">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search by numberUN</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input matInput type="search" [(ngModel)]="searchTerm" placeholder="Enter numberUN" />
+  </mat-form-field>
+
+  <div class="item-container">
+    @for (item of filteredItems(); track $index) {
+      <mat-card class="item" role="button" tabindex="0">
+        <mat-card-content>
+          <div class="item-content">
+            <div class="item-text">{{ item.dangerCode }}</div>
+            <hr class="divider" />
+            <div class="item-text">{{ item.numberUN }}</div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    }
+  </div>
+  <app-plate></app-plate>
+</mat-card>

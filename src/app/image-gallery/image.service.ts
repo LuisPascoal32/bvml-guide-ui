@@ -14,7 +14,7 @@ export interface ImageGroup {
 export const IMAGE_GROUPS: ImageGroup[] = [
   {
     label: 'Pré-Hospitalar',
-    route: 'preHospitalar',
+    route: 'pre-Hospitalar',
     images: [
     ],
   },
@@ -26,10 +26,11 @@ export const IMAGE_GROUPS: ImageGroup[] = [
       {
         label: 'Equipamento',
         route: 'equipment',
-        images: [{ title: 'Câmara Térmica', path: 'assets/ui/equipment/camaraTermica.png' },
-                 { title: 'Multi Gás', path: 'assets/ui/equipment/multiGas.png' },
-                 { title: 'Multi Gás Alarme', path: 'assets/ui/equipment/multiGasAlarme.png' },
-                 { title: 'Multi Gás Valores Ref.', path: 'assets/ui/equipment/multiGasReferencia.png' }
+        images: [
+          { title: 'Câmara Térmica', path: 'assets/ui/equipment/camaraTermica.png' },
+          { title: 'Multi Gás', path: 'assets/ui/equipment/multiGas.png' },
+          { title: 'Multi Gás Alarme', path: 'assets/ui/equipment/multiGasAlarme.png' },
+          { title: 'Multi Gás Valores Ref.', path: 'assets/ui/equipment/multiGasReferencia.png' }
         ],
       },
       {
@@ -54,4 +55,8 @@ export const IMAGE_GROUPS: ImageGroup[] = [
       },
     ],
   },
+    {
+    label: 'Matérias Perigosas',
+    route: 'materias-perigosas'
+  }
 ];

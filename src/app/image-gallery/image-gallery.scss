@@ -4,29 +4,45 @@
 
 .gallery {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 1rem;
   padding: 1rem;
+  justify-content: left;
 }
 
-.element {
+.gallery-item {
+  width: 270px;
+  height: 276px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 270px;
-  color: #ffffff;
-}
-
-.thumbnail {
-  width: 270px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
+  overflow: hidden;
+  border-radius: 12px;
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
+  transition: box-shadow 0.2s ease;
 
-.thumbnail:hover {
-  transform: scale(1.05);
+  &:hover {
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.3);
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  mat-card-content {
+    height: 40px;
+    padding: 0;
+    text-align: center;
+
+    h4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+    }
+  }
 }

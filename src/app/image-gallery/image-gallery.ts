@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatCard, MatCardContent } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
@@ -8,6 +9,7 @@ import { IMAGE_GROUPS } from './image.service';
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.html',
   styleUrls: ['./image-gallery.scss'],
+  imports: [MatCard, MatCardContent]
 })
 export class ImageGalleryComponent {
   images: any[] = [];

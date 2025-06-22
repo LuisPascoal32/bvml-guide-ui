@@ -1,0 +1,55 @@
+<div class="svg-wrapper">
+  <svg viewBox="0 0 200 150" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <style type="text/css">
+        @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400&display=swap");
+        .public-sans {
+          font-family: "Public Sans", sans-serif;
+          font-weight: 900;
+        }
+      </style>
+    </defs>
+
+    <!-- Base layout -->
+    <rect
+      width="200"
+      height="150"
+      fill="#ff9b00"
+      stroke="black"
+      stroke-width="14"
+    />
+    <line x1="0" y1="75" x2="200" y2="75" stroke="black" stroke-width="14" />
+
+    <!-- Top Numbers -->
+    <g class="public-sans">
+      <text
+        class="public-sans"
+        x="100"
+        y="45"
+        font-weight="900"
+        font-size="65"
+        fill="black"
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {{ topValue }}
+      </text>
+    </g>
+
+    <!-- Bottom Numbers -->
+    <g class="public-sans">
+      <text
+        class="public-sans"
+        x="100"
+        y="120"
+        font-weight="900"
+        font-size="65"
+        fill="black"
+        text-anchor="middle"
+        dominant-baseline="middle"
+      >
+        {{ bottomValue }}
+      </text>
+    </g>
+  </svg>
+</div>
