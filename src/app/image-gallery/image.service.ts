@@ -4,6 +4,7 @@ export interface Image {
 }
 
 export interface ImageGroup {
+  icon?: string;
   label: string;
   route: string;
   expanded?: boolean;
@@ -13,12 +14,14 @@ export interface ImageGroup {
 
 export const IMAGE_GROUPS: ImageGroup[] = [
   {
+    icon: 'assets/emt/emt.ico',
     label: 'Pré-Hospitalar',
     route: 'pre-Hospitalar',
     images: [
     ],
   },
   {
+    icon: 'assets/ui/ui.ico',
     label: 'Urbanos/Industriais',
     route: 'ui',
     expanded: false,
@@ -41,11 +44,13 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     ],
   },
   {
+    icon: '',
     label: 'Específicos',
     route: 'specific',
     expanded: false,
     children: [
       {
+        icon: '',
         label: 'HAZMAT',
         route: 'heavy',
         images: [
@@ -53,10 +58,11 @@ export const IMAGE_GROUPS: ImageGroup[] = [
           { title: 'Intervenção(1)', path: 'assets/specific/hazmat/intervencao1Hazmat.png' },
           { title: 'Intervenção(2)', path: 'assets/specific/hazmat/intervencao2Hazmat.png' }],
       },
-    ],
-  },
-    {
-    label: 'Matérias Perigosas',
-    route: 'materias-perigosas'
+      {
+        icon: 'assets/hazmat/hazmat.ico',
+        label: 'Matérias Perigosas',
+        route: 'materias-perigosas'
+      }
+    ]
   }
 ];
