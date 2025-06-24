@@ -3,6 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "types": ["google.maps"],
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -22,6 +23,7 @@
     "typeCheckHostBindings": true,
     "strictTemplates": true
   },
+  
   "files": [],
   "references": [
     {

@@ -35,6 +35,7 @@ export class AppComponent {
   isSmallScreen = false;
 
   navItems = IMAGE_GROUPS.map((group) => ({
+    icon: group.icon,
     label: group.label,
     route: group.children ? undefined : `/${group.route}`,
     expanded: group.expanded,
