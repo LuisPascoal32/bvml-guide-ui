@@ -1,3 +1,22 @@
-    <div class="dialog-content">
-      <img [src]="data.imageUrl" alt="Full Image" class="full-image" />
-    </div>
+<!-- Dialog Content -->
+<div class="dialog-content">
+  <img
+    [src]="data.imageUrl"
+    alt="Full Image"
+    class="full-image"
+    (click)="openFullscreen()"
+  />
+</div>
+
+<!-- Fullscreen Image Modal -->
+<div
+  class="fullscreen-modal"
+  *ngIf="isFullscreen"
+  (click)="closeFullscreen()"
+>
+  <img
+    [src]="data.imageUrl"
+    alt="Zoomed Image"
+    class="fullscreen-image"
+  />
+</div>
