@@ -1,13 +1,8 @@
-<div
-  class="fullscreen-modal"
-  (click)="onBackdropClick()"
->
-  <div class="image-wrapper">
-    <img
-      [src]="data.imageUrl"
-      alt="Zoomed Image"
-      class="fullscreen-image"
-      (click)="$event.stopPropagation()"
-    />
-  </div>
+<div class="fullscreen-modal" (click)="close()">
+  <img
+    [src]="data.imageUrl"
+    alt="Zoomed Image"
+    class="fullscreen-image"
+    (click)="$event.stopPropagation()"
+  />
 </div>

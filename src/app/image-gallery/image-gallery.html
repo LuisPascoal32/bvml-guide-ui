@@ -1,7 +1,8 @@
 <h2 class="header">{{sectionHeader}} - {{subSectionHeader}}</h2>
+<p class="mobile-tip">📱 Tap any image to view full size</p>
 <div class="gallery">
   @for (img of images; track $index) {
-    <mat-card class="gallery-item" (click)="openImage(img.path)" role="button" tabindex="0">
+    <mat-card class="gallery-item" matRipple (click)="openImage(img.path)" role="button" tabindex="0">
       <img mat-card-image [src]="img.path" alt="{{ img.title }}" />
       <mat-card-content>
         <h4 class="mat-body-medium">{{ img.title }}</h4>
