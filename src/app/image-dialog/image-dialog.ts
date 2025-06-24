@@ -6,16 +6,15 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   selector: 'app-image-dialog',
   templateUrl: './image-dialog.html',
   styleUrls: ['./image-dialog.scss'],
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class ImageDialogComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { imageUrl: string },
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: { imageUrl: string },
     private dialogRef: MatDialogRef<ImageDialogComponent>
-  ) { }
-  onBackdropClick(): void {
+  ) {}
+
+  close(): void {
     this.dialogRef.close();
   }
 }
-
-
-
