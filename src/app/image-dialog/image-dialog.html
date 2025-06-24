@@ -1,22 +1,13 @@
-<!-- Dialog Content -->
-<div class="dialog-content">
-  <img
-    [src]="data.imageUrl"
-    alt="Full Image"
-    class="full-image"
-    (click)="openFullscreen()"
-  />
-</div>
-
-<!-- Fullscreen Image Modal -->
 <div
   class="fullscreen-modal"
-  *ngIf="isFullscreen"
-  (click)="closeFullscreen()"
+  (click)="onBackdropClick()"
 >
-  <img
-    [src]="data.imageUrl"
-    alt="Zoomed Image"
-    class="fullscreen-image"
-  />
+  <div class="image-wrapper">
+    <img
+      [src]="data.imageUrl"
+      alt="Zoomed Image"
+      class="fullscreen-image"
+      (click)="$event.stopPropagation()"
+    />
+  </div>
 </div>

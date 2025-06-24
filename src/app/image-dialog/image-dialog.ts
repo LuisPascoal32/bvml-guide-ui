@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-image-dialog',
@@ -9,16 +9,13 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   imports: [CommonModule]
 })
 export class ImageDialogComponent {
-  isFullscreen = true;
-  constructor(@Inject(MAT_DIALOG_DATA) public data: { imageUrl: string }) { }
-
-  openFullscreen() {
-    this.isFullscreen = true;
-  }
-
-  closeFullscreen() {
-    this.isFullscreen = false;
+  constructor(@Inject(MAT_DIALOG_DATA) public data: { imageUrl: string },
+    private dialogRef: MatDialogRef<ImageDialogComponent>
+  ) { }
+  onBackdropClick(): void {
+    this.dialogRef.close();
   }
 }
+
 
 
