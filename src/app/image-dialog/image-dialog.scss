@@ -9,22 +9,30 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+
+  touch-action: auto;
+  -ms-touch-action: auto;
+  overscroll-behavior: contain;
+  user-select: auto;
+  -webkit-user-select: auto;
+  user-zoom: zoom;
 }
 
-.zoom-wrapper {
-  touch-action: none;
-  overflow: hidden;
+.image-wrapper {
+  overflow: auto;
   max-width: 100%;
   max-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  touch-action: pinch-zoom;
 }
 
 .fullscreen-image {
+  width: auto;
+  height: auto;
+  max-width: unset;
+  max-height: unset;
   display: block;
-  max-width: 100%;
-  max-height: 100%;
-  user-select: none;
+
+  // Prevent dragging and selection
   -webkit-user-drag: none;
+  user-select: none;
 }
