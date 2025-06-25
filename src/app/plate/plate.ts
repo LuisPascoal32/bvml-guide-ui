@@ -1,6 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../dialog/dialog';
+import { HazardousMaterial } from '../models/hazardous-materials';
 
 @Component({
   selector: 'app-plate',
@@ -8,14 +9,13 @@ import { DialogComponent } from '../dialog/dialog';
   styleUrls: ['./plate.scss']
 })
 export class PlateComponent {
-  @Input() topValue: string = "129";
-  @Input() bottomValue: string = "1203";
+  @Input() material!: HazardousMaterial;
 
   private readonly dialog = inject(MatDialog);
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogComponent, {
-      data: {},
+      data: this.material,
       height: "100%",
       width: "100%",
       maxWidth: "100%",

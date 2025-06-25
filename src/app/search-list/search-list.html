@@ -7,7 +7,7 @@
 
   <div class="item-container">
     @for (item of filteredItems(); track $index) {
-      <app-plate [topValue]="item.dangerCode" [bottomValue]="item.numberUN"></app-plate>
+      <app-plate [material]="item"></app-plate>
     }
   </div>
 </mat-card>

@@ -1,18 +1,22 @@
-<google-map
-  height="100vh"
-  width="100%"
-  [center]="center"
-  [zoom]="zoom"
-  *ngIf="center"
->
+@if (center) {
+<google-map height="100%" width="100%" [center]="center" [zoom]="zoom">
+  <map-marker [position]="center" [options]="markerOptions"></map-marker>
+
   <map-marker
-    [position]="center"
-    [options]="markerOptions"
-  ></map-marker>
+  [position]="center"
+  [options]="markerOptions"
+  (mapDragend)="onMarkerDragEnd($event)"
+></map-marker>
 
   <map-circle
     [center]="center"
-    [radius]="radius"
-    [options]="circleOptions"
+    [radius]="leakRadius"
+    [options]="leakCircle"
+  ></map-circle>
+    <map-circle
+    [center]="center"
+    [radius]="fireRadius"
+    [options]="fireCircle"
   ></map-circle>
 </google-map>
+}
