@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { hazardousMaterials } from '../models/hazardous-materials';
 import { PlateComponent } from '../plate/plate';
 
 @Component({
@@ -22,16 +23,7 @@ import { PlateComponent } from '../plate/plate';
 export class SearchListComponent {
   constructor() {}
 
-  items = [
-    { dangerCode: '33', numberUN: '1087' },
-    { dangerCode: '33', numberUN: '1288' },
-    { dangerCode: '33', numberUN: '1023' },
-    { dangerCode: '33', numberUN: '1234' },
-    { dangerCode: '33', numberUN: '5555' },
-    { dangerCode: '33', numberUN: '2312' },
-    { dangerCode: '33', numberUN: '4444' },
-    { dangerCode: '33', numberUN: '6666' },
-  ];
+  items = hazardousMaterials;
 
   searchTerm: string = '';
 

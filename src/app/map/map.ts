@@ -1,5 +1,4 @@
-import { NgIf } from '@angular/common';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { GoogleMap, GoogleMapsModule } from '@angular/google-maps';
 
 @Component({
@@ -8,16 +7,15 @@ import { GoogleMap, GoogleMapsModule } from '@angular/google-maps';
   styleUrls: ['./map.scss'],
   imports: [
     GoogleMapsModule,
-    GoogleMap,
-    NgIf
+    GoogleMap
   ],
 })
 export class MapComponent implements OnInit {
   @ViewChild(GoogleMap, { static: false }) map!: GoogleMap;
+  @Input() radius!: number; //meters
 
-  zoom = 15;
+  zoom = 14;
   center!: google.maps.LatLngLiteral;
-  radius = 1000; // meters
   circleOptions: google.maps.CircleOptions = {
     strokeColor: '#007BFF',
     strokeOpacity: 0.8,
