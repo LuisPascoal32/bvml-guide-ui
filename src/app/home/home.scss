@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    color: #838383;
+  }
+}
+
+.image {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
