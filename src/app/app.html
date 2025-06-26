@@ -49,11 +49,16 @@
         <mat-icon>menu</mat-icon>
       </button>
       <img src="assets/logo/bvml.ico" class="header-logo" >
-      <span>B.V.Matosinhos-Leça (Guia)</span>
+      <span>B.V.Matosinhos-Leça</span>
     </mat-toolbar>
 
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
+<div class="content">
+  <div *ngIf="router.url === '/'" class="centered-title">
+    <img src="assets/logo/bvml.png" alt="Logo" class="title-image" />
+    <h1>Guia de apoio à decisão</h1>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>
   </mat-sidenav-content>
 </mat-sidenav-container>

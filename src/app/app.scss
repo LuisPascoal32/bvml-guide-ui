@@ -35,7 +35,30 @@
   margin-right: 8px;
 }
 
+.content {
+  position: relative;
+  min-height: 100vh;
+}
 
+.centered-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered-title img.title-image {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.centered-title h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hwb(0 52% 47%);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
 @media (max-width: 768px) {
   .sidenav {
     width: 200px;

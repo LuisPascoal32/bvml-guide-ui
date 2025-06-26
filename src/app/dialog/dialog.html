@@ -3,21 +3,29 @@
 <mat-dialog-content>
   <div class="material-info">
     <div class="info-item">
-      <label>Danger Code:</label>
+      <label>Código Perigo:</label>
       <span>{{ data.dangerCode }}</span>
     </div>
     <div class="info-item">
-      <label>UN Number:</label>
+      <label>Nr ONU:</label>
       <span>{{ data.numberUN }}</span>
     </div>
     <div class="info-item">
-      <label>Evacuation Range:</label>
-      <span>{{ data.evacuationRange }} meters</span>
+      <label>Zona de Evacuação (Fuga/Derrame):</label>
+      <span>{{ data.leakRange }} meters
+      <span class="legend-color" style="background-color: #ffb217;"></span>
+      </span>
+    </div>
+        <div class="info-item">
+      <label>Zona de Evacuação (Incêndio):</label>
+      <span>{{ data.fireRange }} meters
+      <span class="legend-color" style="background-color: #ff0026;"></span>
+      </span>
     </div>
   </div>
 
   <div class="map-wrapper">
-    <app-map [radius]="data.evacuationRange"></app-map>
+    <app-map [leakRadius]="data.leakRange" [fireRadius]="data.fireRange"></app-map>
   </div>
 </mat-dialog-content>
 

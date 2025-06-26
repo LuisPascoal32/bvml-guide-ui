@@ -1,4 +1,9 @@
+@if (!subSectionHeader)  {
+<h2 class="header">{{sectionHeader}}</h2>
+}
+@if (subSectionHeader)  {
 <h2 class="header">{{sectionHeader}} - {{subSectionHeader}}</h2>
+}
 <p class="mobile-tip">📱 Seleciona a Imagem</p>
 <div class="gallery">
   @for (img of images; track $index) {

@@ -16,13 +16,13 @@ export const IMAGE_GROUPS: ImageGroup[] = [
   {
     icon: 'assets/emt/emt.ico',
     label: 'Pré-Hospitalar',
-    route: 'pre-Hospitalar',
+    route: 'pre-hospitalar',
     images: [
     ],
   },
   {
     icon: 'assets/ui/ui.ico',
-    label: 'Urbanos/Industriais',
+    label: 'Urbanos',
     route: 'ui',
     expanded: false,
     children: [
@@ -37,10 +37,55 @@ export const IMAGE_GROUPS: ImageGroup[] = [
         ],
       },
       {
-        label: 'Fuga Gás',
+        label: 'Fugas Gás',
         route: 'gasLeak',
-        images: [{ title: 'Fuga Gás (Conduta)', path: 'assets/ui/gasLeak/fugaGasConduta.png' }],
+        expanded: false,
+        images: [{ title: 'Fuga Gás (Conduta)', path: 'assets/gasLeak/fugaGasConduta.png' }],
       },
+    ],
+  },
+    {
+    icon: '',
+    label: 'PPI',
+    route: 'ppi',
+    expanded: false,
+    children: [
+      {
+        label: 'Silos Leixões',
+        route: 'silosleixoes',
+        images: [
+        ],
+      },
+      {
+        label: 'IKEA',
+        route: 'ikea',
+        images: [
+        ],
+      },
+      {
+        label: 'Mar Shopping',
+        route: 'marshopping',
+        images: [
+        ],
+      },
+      {
+        label: 'Resende',
+        route: 'resende',
+        images: [
+        ],
+      },
+      {
+        label: 'Pergás',
+        route: 'pergas',
+        images: [
+        ],
+      },
+      {
+        label: 'Padre Ângelo',
+        route: 'padreangelo',
+        images: [
+        ],
+      }
     ],
   },
   {
@@ -49,6 +94,14 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     route: 'specific',
     expanded: false,
     children: [
+      {
+        icon: '',
+        label: 'Veículos Elétricos',
+        route: 'veiculoseletricos',
+        images: [
+          { title: 'Baterias Lítio', path: 'assets/specific/eletricvehicles/eletricVehicles.png' },
+        ],
+      },
       {
         icon: '',
         label: 'HAZMAT',

@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { IMAGE_GROUPS } from './image-gallery/image.service';
 
 @Component({
@@ -45,7 +45,7 @@ export class AppComponent {
     })),
   }));
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, public router: Router) {}
 
   ngOnInit(): void {
     this.breakpointObserver
