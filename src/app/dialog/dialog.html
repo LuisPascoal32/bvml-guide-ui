@@ -12,20 +12,25 @@
     </div>
     <div class="info-item">
       <label>Zona de Evacuação (Fuga/Derrame):</label>
-      <span>{{ data.leakRange }} meters
-      <span class="legend-color" style="background-color: #ffb217;"></span>
-      </span>
+      <div>
+        <span>{{ data.leakRange }} meters</span>
+        <span class="legend-color" style="background-color: #ffb217"></span>
+      </div>
     </div>
-        <div class="info-item">
+    <div class="info-item">
       <label>Zona de Evacuação (Incêndio):</label>
-      <span>{{ data.fireRange }} meters
-      <span class="legend-color" style="background-color: #ff0026;"></span>
-      </span>
+      <div>
+        <span>{{ data.fireRange }} meters</span>
+        <span class="legend-color" style="background-color: #ff0026"></span>
+      </div>
     </div>
   </div>
 
   <div class="map-wrapper">
-    <app-map [leakRadius]="data.leakRange" [fireRadius]="data.fireRange"></app-map>
+    <app-map
+      [leakRadius]="data.leakRange"
+      [fireRadius]="data.fireRange"
+    ></app-map>
   </div>
 </mat-dialog-content>
 
