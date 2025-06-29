@@ -7,17 +7,14 @@
   >
     <mat-nav-list>
       <ng-container *ngFor="let item of navItems">
-        <!-- Simple link (no children) -->
         <mat-list-item
           *ngIf="!item.children"
-          mat-list-item
-          [routerLink]="item.route"
+          [routerLink]="getFullRoute(item)"
           routerLinkActive="active-link"
         >
-          <span class="sidenav-list-item">{{item.label}}</span>
+          <span class="sidenav-list-item">{{ item.label }}</span>
         </mat-list-item>
 
-        <!-- Expansion panel for dropdown items -->
         <mat-expansion-panel *ngIf="item.children" [expanded]="item.expanded">
           <mat-expansion-panel-header>
             <mat-panel-title>{{ item.label }}</mat-panel-title>
@@ -25,8 +22,7 @@
 
           <ng-container *ngFor="let child of item.children">
             <mat-list-item
-              mat-list-item
-              [routerLink]="child.route"
+              [routerLink]="getFullRoute(item, child)"
               routerLinkActive="active-link"
             >
               <span class="sidenav-list-item">{{ child.label }}</span>

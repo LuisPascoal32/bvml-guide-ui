@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { hazardousMaterials } from '../models/hazardous-materials';
+import { hazardousMaterials } from '../models/hazardous-materials.model';
 import { PlateComponent } from '../plate/plate';
 
 @Component({

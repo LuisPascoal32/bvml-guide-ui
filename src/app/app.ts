@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Router, RouterModule } from '@angular/router';
-import { IMAGE_GROUPS } from './image-gallery/image.service';
+import { SIDENAV } from './models/sidenav.model';
 
 @Component({
   selector: 'app-root',
@@ -34,18 +34,12 @@ export class AppComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   isSmallScreen = false;
 
-  navItems = IMAGE_GROUPS.map((group) => ({
-    icon: group.icon,
-    label: group.label,
-    route: group.children ? undefined : `/${group.route}`,
-    expanded: group.expanded,
-    children: group.children?.map((child) => ({
-      label: child.label,
-      route: `/${group.route}/${child.route}`,
-    })),
-  }));
+  navItems = SIDENAV;
 
-  constructor(private breakpointObserver: BreakpointObserver, public router: Router) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    public router: Router
+  ) {}
 
   ngOnInit(): void {
     this.breakpointObserver
@@ -58,5 +52,9 @@ export class AppComponent {
 
   toggleSidebar(): void {
     this.sidenav.toggle();
+  }
+
+  getFullRoute(group: any, child?: any): string {
+    return child ? `/${group.route}/${child.route}` : `/${group.route}`;
   }
 }

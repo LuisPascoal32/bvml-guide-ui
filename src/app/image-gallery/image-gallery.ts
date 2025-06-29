@@ -1,43 +1,46 @@
+// src/app/image-gallery/image-gallery.ts
 import { Component } from '@angular/core';
-import { MatCard, MatCardContent } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
-import { IMAGE_GROUPS } from './image.service';
+import { ImageService } from './image.service';
 
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.html',
   styleUrls: ['./image-gallery.scss'],
-  imports: [MatCard, MatCardContent]
+  standalone: true,
+  imports: [MatCardModule],
 })
 export class ImageGalleryComponent {
   images: any[] = [];
-  sectionHeader:any;
-  subSectionHeader:any;
-  constructor(private dialog: MatDialog, private route: ActivatedRoute) {}
+  sectionHeader = '';
+  subSectionHeader = '';
 
-ngOnInit() {
-  this.route.params.subscribe(params => {
-    const sectionRoute = params['section'];
-    const subSectionRoute = params['subSection'];
+  constructor(
+    private route: ActivatedRoute,
+    private imageService: ImageService,
+    private dialog: MatDialog
+  ) {}
 
-    const section = IMAGE_GROUPS.find(s => s.route === sectionRoute);
-    this.sectionHeader = section?.label;
+  ngOnInit(): void {
+    this.route.params.subscribe((params) => {
+      const section = params['section'];
+      const subSection = params['subSection'];
 
-    const subSection = section?.children?.find(c => c.route === subSectionRoute);
-    this.subSectionHeader = subSection?.label;
-    // Get images from subsection if available, else from section, else empty array
-    this.images = subSectionRoute
-      ? subSection?.images ?? []
-      : section?.images ?? [];
-  });
+      this.sectionHeader = section;
+      this.subSectionHeader = subSection;
 
-}
+      this.imageService
+        .loadImages(section, subSection)
+        .subscribe((data) => (this.images = data));
+    });
+  }
 
   openImage(imageUrl: string): void {
     this.dialog.open(ImageDialogComponent, {
-      data: { imageUrl }
+      data: { imageUrl },
     });
   }
 }
