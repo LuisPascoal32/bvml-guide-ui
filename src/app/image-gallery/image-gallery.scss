@@ -15,7 +15,9 @@
   flex-direction: row;
   gap: 1rem;
 }
-
+mat-expansion-panel {
+  width: 100%
+}
 .gallery {
   display: flex;
   flex-wrap: wrap;
