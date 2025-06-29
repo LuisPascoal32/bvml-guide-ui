@@ -1,6 +1,12 @@
-<h2 mat-dialog-title>{{ data.name }} ({{ data.warningMsg }})</h2>
+<h2 mat-dialog-title>{{ data.name }} </h2>
 <mat-dialog-content>
   <div class="material-info">
+    <div class="info-item-warning">
+      <label>Atenção:</label>
+      <span>{{ data.warningMsg }}</span>
+    </div>
+    <div class="info-item">
+    </div>
     <div class="info-item">
       <label>Guia:</label>
       <span>{{ data.guideNr }}</span>
@@ -36,7 +42,7 @@
       </div>
     </mat-expansion-panel>
 
-        <mat-expansion-panel>
+    <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
           Incêndio

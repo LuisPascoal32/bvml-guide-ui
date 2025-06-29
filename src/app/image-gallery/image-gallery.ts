@@ -4,15 +4,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
 import { IMAGE_GROUPS } from './image.service';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-image-gallery',
   templateUrl: './image-gallery.html',
   styleUrls: ['./image-gallery.scss'],
-  imports: [MatCard, MatCardContent]
+  imports: [MatCard, MatCardContent, MatExpansionModule]
 })
 export class ImageGalleryComponent {
-  images: any[] = [];
+  subjects: any[] = [];
   sectionHeader:any;
   subSectionHeader:any;
   constructor(private dialog: MatDialog, private route: ActivatedRoute) {}
@@ -25,13 +26,15 @@ ngOnInit() {
     const section = IMAGE_GROUPS.find(s => s.route === sectionRoute);
     this.sectionHeader = section?.label;
 
-    const subSection = section?.children?.find(c => c.route === subSectionRoute);
+    const subSection = section?.subjects?.find(c => c.route === subSectionRoute);
     this.subSectionHeader = subSection?.label;
     // Get images from subsection if available, else from section, else empty array
-    this.images = subSectionRoute
-      ? subSection?.images ?? []
-      : section?.images ?? [];
+    this.subjects = subSectionRoute
+      ? subSection?.subSubjects ?? []
+      : section?.subSubjects ?? [];
   });
+
+  console.log (this.subjects);
 
 }
 

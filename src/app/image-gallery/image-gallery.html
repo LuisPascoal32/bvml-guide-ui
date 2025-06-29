@@ -1,17 +1,37 @@
-@if (!subSectionHeader)  {
+@if (!subSectionHeader) {
 <h2 class="header">{{sectionHeader}}</h2>
 }
-@if (subSectionHeader)  {
+@if (subSectionHeader) {
 <h2 class="header">{{sectionHeader}} - {{subSectionHeader}}</h2>
 }
 <p class="mobile-tip">📱 Seleciona a Imagem</p>
 <div class="gallery">
-  @for (img of images; track $index) {
+  @for (subject of subjects; track $index) {
+  @if (subject.label=='Warning') {
+  <mat-card class="gallery-item" matRipple (click)="openImage(subject.images[0].path)" role="button" tabindex="0">
+    <img mat-card-image [src]="subject.images[0].path" alt="{{ subject.images[0].title }}" />
+    <mat-card-content>
+      <h4 class="mat-body-medium">{{ subject.images[0].title }}</h4>
+    </mat-card-content>
+  </mat-card>
+  } @else {
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{subject.label}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="panel-content">
+    @for (img of subject.images; track $index) {
     <mat-card class="gallery-item" matRipple (click)="openImage(img.path)" role="button" tabindex="0">
       <img mat-card-image [src]="img.path" alt="{{ img.title }}" />
       <mat-card-content>
         <h4 class="mat-body-medium">{{ img.title }}</h4>
       </mat-card-content>
     </mat-card>
+    }
+    </div>
+  </mat-expansion-panel>
+  }
   }
 </div>
