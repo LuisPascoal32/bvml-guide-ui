@@ -2,13 +2,38 @@
   height: 100%;
 
   .sidenav {
-    width: 260px;
+    width: 320px;
     padding-top: 1rem;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
-    .sidenav-list-item {
-      color: #ffffff;
+    mat-list-item {
+      margin: 12px 0;
+
+      .sidenav-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+
+        .sidenav-item-icon {
+          width: 5%;
+        }
+
+        .sidenav-item-details {
+          display: flex;
+          flex-direction: column;
+
+          .sidenav-item-label {
+            font-size: 15px;
+          }
+
+          .sidenav-item-description {
+            font-size: 13px;
+            color: gray;
+          }
+        }
+      }
     }
 
     mat-expansion-panel {
