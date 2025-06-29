@@ -1,11 +1,11 @@
-export interface SIDENAV {
+export interface NavItem {
   label: string;
   route: string;
   expanded?: boolean;
-  children?: SIDENAV[];
+  children?: NavItem[];
 }
 
-export const SIDENAV: SIDENAV[] = [
+export const NAV_ITEMS: NavItem[] = [
   {
     label: 'Pré-Hospitalar',
     route: 'pre-hospitalar',

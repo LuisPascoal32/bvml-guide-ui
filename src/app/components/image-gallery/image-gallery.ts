@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { NavigationService } from '../../services/navigation/navigation.service';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
 import { ImageService } from './image.service';
 
@@ -15,12 +16,12 @@ import { ImageService } from './image.service';
 })
 export class ImageGalleryComponent {
   images: any[] = [];
-  sectionHeader = '';
-  subSectionHeader = '';
+  header: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private imageService: ImageService,
+    private navigationService: NavigationService,
     private dialog: MatDialog
   ) {}
 
@@ -29,8 +30,7 @@ export class ImageGalleryComponent {
       const section = params['section'];
       const subSection = params['subSection'];
 
-      this.sectionHeader = section;
-      this.subSectionHeader = subSection;
+      this.header = this.navigationService.getNavLabelByRoute(section, subSection);
 
       this.imageService
         .loadImages(section, subSection)
