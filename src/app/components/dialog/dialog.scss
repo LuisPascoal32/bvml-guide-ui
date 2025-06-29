@@ -53,6 +53,28 @@ mat-dialog-content {
       color: #a3a3a3;
     }
   }
+
+    .info-item-warning {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #c70404;
+      margin-bottom: 0.2rem;
+    }
+
+    span {
+      font-size: 0.95rem;
+      color: #c70404;
+    }
+  }
 }
 
 .map-wrapper {
