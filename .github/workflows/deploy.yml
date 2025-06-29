@@ -26,6 +26,13 @@ jobs:
 
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href=/bvml-guide-ui/
+      
+      - name: Inject Google Maps API key into runtime-config.js
+        run: |
+          mkdir -p ./dist/bvml-guide-ui/browser/assets
+          echo "window.__env = { GOOGLE_MAPS_API_KEY: '${{ secrets.GOOGLE_API_KEY }}' };" \
+            > ./dist/bvml-guide-ui/browser/assets/runtime-config.js
+          ls -la ./dist/browser/assets/
 
       - name: Copy index.html to 404.html for SPA fallback
         run: cp ./dist/bvml-guide-ui/browser/index.html ./dist/bvml-guide-ui/browser/404.html
