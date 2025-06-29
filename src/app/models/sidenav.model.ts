@@ -7,6 +7,10 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   {
+    label: 'Inicio',
+    route: ''
+  },
+  {
     label: 'Pré-Hospitalar',
     route: 'pre-hospitalar',
   },
