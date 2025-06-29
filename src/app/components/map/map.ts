@@ -43,8 +43,6 @@ export class MapComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    console.log(this.leakRadius);
-    console.log(this.fireRadius);
     this.getUserLocation();
   }
 

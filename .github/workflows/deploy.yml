@@ -11,6 +11,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
 
     steps:
       - name: Checkout repository
@@ -23,6 +25,14 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Inject API key into environment.prod.generated.ts
+        run: |
+          echo "export const environment = { production: true, googleApiKey: '${GOOGLE_API_KEY}' };" > src/environments/environment.prod.generated.ts
+
+      - name: Replace GOOGLE_API_KEY placeholder in index.html
+        run: |
+          sed -i "s|%%GOOGLE_API_KEY%%|${GOOGLE_API_KEY}|g" src/index.html
 
       - name: Build Angular app
         run: npm run build -- --configuration production --base-href=/bvml-guide-ui/
