@@ -1,6 +1,13 @@
-[
-  {
-    "title": "Baterias Lítio",
-    "path": "assets/gallery/vehicles/eletric/lithium-battery.png"
-  }
-]
+{
+  "groups": [
+    {
+      "label": "Baterias",
+      "images": [
+        {
+          "label": "Baterias Lítio",
+          "path": "assets/gallery/vehicles/eletric/lithium-battery.png"
+        }
+      ]
+    }
+  ]
+}

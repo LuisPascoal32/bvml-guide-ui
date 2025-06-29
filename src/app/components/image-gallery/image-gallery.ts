@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { ActivatedRoute } from '@angular/router';
 import { NavigationService } from '../../services/navigation/navigation.service';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
@@ -12,10 +13,11 @@ import { ImageService } from './image.service';
   templateUrl: './image-gallery.html',
   styleUrls: ['./image-gallery.scss'],
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule, MatExpansionModule],
 })
 export class ImageGalleryComponent {
-  images: any[] = [];
+  highlighted: any[] = [];
+  groups: any[] = [];
   header: string | undefined;
 
   constructor(
@@ -32,9 +34,12 @@ export class ImageGalleryComponent {
 
       this.header = this.navigationService.getNavLabelByRoute(section, subSection);
 
-      this.imageService
-        .loadImages(section, subSection)
-        .subscribe((data) => (this.images = data));
+      this.imageService.loadImages(section, subSection).subscribe((data: any) => {
+        this.groups = data?.groups;
+        this.highlighted = data?.highlighted;
+        console.log(data);
+
+      });
     });
   }
 

@@ -1,6 +1,13 @@
-[
-  {
-    "title": "Fuga Gás",
-    "path": "assets/gallery/ui/gas-leak/gas-pipe-leak.png"
-  }
-]
+{
+  "groups": [
+    {
+      "label": "Fuga Gás",
+      "images": [
+        {
+          "label": "Fuga Gás",
+          "path": "assets/gallery/ui/gas-leak/gas-pipe-leak.png"
+        }
+      ]
+    }
+  ]
+}

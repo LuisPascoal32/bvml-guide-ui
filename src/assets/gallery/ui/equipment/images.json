@@ -1,18 +1,30 @@
-[
-  {
-    "title": "Câmara Térmica",
-    "path": "assets/gallery/ui/equipment/thermal-camera.png"
-  },
-  {
-    "title": "Multi Gás",
-    "path": "assets/gallery/ui/equipment/multi-gas.png"
-  },
-  {
-    "title": "Multi Gás Alarme",
-    "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
-  },
+{
+  "groups": [
     {
-    "title": "Multi Gás Valores Ref.",
-    "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
-  }
-]
+      "label": "Câmara Térmica",
+      "images": [
+        {
+          "label": "Câmara Térmica",
+          "path": "assets/gallery/ui/equipment/thermal-camera.png"
+        }
+      ]
+    },
+    {
+      "label": "Multi Gás",
+      "images": [
+        {
+          "label": "Multi Gás",
+          "path": "assets/gallery/ui/equipment/multi-gas.png"
+        },
+        {
+          "label": "Multi Gás Alarme",
+          "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
+        },
+        {
+          "label": "Multi Gás Valores Ref.",
+          "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
+        }
+      ]
+    }
+  ]
+}
