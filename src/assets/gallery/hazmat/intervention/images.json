@@ -1,0 +1,23 @@
+{
+  "highlighted": [
+    {
+      "label": "!!REGRAS!!",
+      "path": "assets/gallery/hazmat/intervention/rules.png"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Intervenção",
+      "images": [
+        {
+          "label": "Intervenção(1)",
+          "path": "assets/gallery/hazmat/intervention/intervention-1.png"
+        },
+        {
+          "label": "Intervenção(2)",
+          "path": "assets/gallery/hazmat/intervention/intervention-2.png"
+        }
+      ]
+    }
+  ]
+}

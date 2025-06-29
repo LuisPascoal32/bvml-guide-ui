@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { HazardousMaterial } from '../../models/hazardous-materials.model';
 import { DialogComponent } from '../dialog/dialog';
-import { HazardousMaterial } from '../models/hazardous-materials';
 
 @Component({
   selector: 'app-plate',

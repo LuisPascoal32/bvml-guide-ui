@@ -1,0 +1,62 @@
+{
+  "highlighted": [
+    {
+      "label": "AVISO!",
+      "path": "assets/gallery/ppi/silos-leixoes/warning.png"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Emergências Médicas",
+      "images": [
+        {
+          "label": "Emergências Médicas(1)",
+          "path": "assets/gallery/ppi/silos-leixoes/medical-emergency-1.png"
+        },
+        {
+          "label": "Emergências Médicas(2)",
+          "path": "assets/gallery/ppi/silos-leixoes/medical-emergency-2.png"
+        }
+      ]
+    },
+    {
+      "label": "Espaços Confinados",
+      "images": [
+        {
+          "label": "Espaços Confinados(1)",
+          "path": "assets/gallery/ppi/silos-leixoes/confined-spaces-1.png"
+        },
+        {
+          "label": "Espaços Confinados(2)",
+          "path": "assets/gallery/ppi/silos-leixoes/confined-spaces-2.png"
+        },
+        {
+          "label": "Espaços Confinados(3)",
+          "path": "assets/gallery/ppi/silos-leixoes/confined-spaces-3.png"
+        }
+      ]
+    },
+    {
+      "label": "Incêndio Interior",
+      "images": [
+        {
+          "label": "Incêndio Interior(1)",
+          "path": "assets/gallery/ppi/silos-leixoes/indoor-fire-1.png"
+        },
+        {
+          "label": "Incêndio Interior(2)",
+          "path": "assets/gallery/ppi/silos-leixoes/indoor-fire-2.png"
+        }
+      ]
+    },
+    {
+      "label": "Incêndio Fosfina",
+      "images": [
+        {
+          "label": "Espaços Fosfina",
+          "path": "assets/gallery/ppi/silos-leixoes/phosphine-fire.png"
+        }
+      ]
+    }
+  ]
+}
