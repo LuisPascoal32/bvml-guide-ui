@@ -37,6 +37,26 @@ export const hazardousMaterials: HazardousMaterial[] = [
         action: 'Manter distância. Proteger a zona com cortina de proteção. O material reage violentamente com água (liberta gases tóxicos ou corrosivos); garantir a contenção da água.',
         range: 800
     }
-  }
+  },
+   {
+    name: 'Hipoclorito de Cálcio',
+    guideNr: 140,
+    dangerCode: '50',
+    numberUN: '2880',
+    warningMsg: 'Em caso de Incêndio: Pode aumentar a combustão e libertar fumos tóxicos. Em caso de Derrame: pode reagir quimicamente com outros produtos originando vapores tóxicos. NÃO Utilizar Pó Quimico nem CO2.',
+    leak:  {
+        epi : 'SEM EPI Para Zona Quente // EQUIPA INTERVENÇÃO- EPI + ARICA // EQUIPA DE PROTEÇÃO- EPI + ARICA + LINHA DE DESCONTAMINAÇÃO DE EMERGÊNCIA',
+        isolation :'Criar Corredor Entrada // Criar Corredor Redutor de Contaminação',
+        action: 'Solicitar RSB para o T.O',
+        decontamination: 'Aplicar quantidade abundante de água',
+        range: 100
+     },
+    fire:  {
+        epi : 'EQUIPA INTERVENÇÃO- EPI + ARICA // EQUIPA DE PROTEÇÃO- EPI + ARICA + Linha de Descontaminação Emergência',
+        isolation :'Criar Corredor Entrada // Criar Corredor Redutor de Contaminação',
+        action: 'Manter distância. Aplicação de monitores de combate e cortina de proteção. Solicitar RSB. Material Reage Violentamente com Água. Garantir Contenção da Água.',
+        range: 800
+     }
+  },
 ]
 
