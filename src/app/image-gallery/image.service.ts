@@ -3,39 +3,45 @@ export interface Image {
   path: string;
 }
 
-export interface ImageSubGroup {
+export interface SubSubject {
   label: string;
   images: Image[];
 }
 
-export interface ImageGroup {
+export interface Subject {
   icon?: string;
   label: string;
   route: string;
   expanded?: boolean;
-  images?: ImageSubGroup[];
-  children?: ImageGroup[];
+  subSubjects?: SubSubject[];
+  subjects?: Subject[];
 }
 
-export const IMAGE_GROUPS: ImageGroup[] = [
+export const IMAGE_GROUPS: Subject[] = [
+    {
+    icon: '',
+    label: 'Inicio',
+    route: '',
+    subSubjects: [],
+  },
   {
     icon: 'assets/emt/emt.ico',
     label: 'Pré-Hospitalar',
     route: 'pre-hospitalar',
-    images: [],
+    subSubjects: [],
   },
   {
     icon: 'assets/ui/ui.ico',
     label: 'Urbanos',
     route: 'ui',
     expanded: false,
-    children: [
+    subjects: [
       {
         label: 'Equipamento',
         route: 'equipment',
-        images: [
+        subSubjects: [
           {
-            label: 'Camara termica',
+            label: 'Camara Térmica',
             images: [
               {
                 title: 'Câmara Térmica',
@@ -44,7 +50,7 @@ export const IMAGE_GROUPS: ImageGroup[] = [
             ],
           },
           {
-            label: 'Gáses',
+            label: 'Multi Gás',
             images: [
               {
                 title: 'Multi Gás',
@@ -66,10 +72,15 @@ export const IMAGE_GROUPS: ImageGroup[] = [
         label: 'Fugas Gás',
         route: 'gasLeak',
         expanded: false,
-        images: [
+        subSubjects: [
           {
-            title: 'Fuga Gás (Conduta)',
-            path: 'assets/gasLeak/fugaGasConduta.png',
+            label: 'Fuga Gás',
+            images: [
+              {
+                title: 'Fuga Gás (Conduta)',
+                path: 'assets/gasLeak/fugaGasConduta.png',
+              }
+            ]
           },
         ],
       },
@@ -80,70 +91,98 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     label: 'PPI',
     route: 'ppi',
     expanded: false,
-    children: [
+    subjects: [
       {
         label: 'Silos Leixões',
         route: 'silosleixoes',
-        images: [
-          { title: 'AVISO!', path: 'assets/ppi/silos/silosWarning.png' },
+        subSubjects: [
           {
-            title: 'Emergências Médicas(1)',
-            path: 'assets/ppi/silos/silosEmergenciasMedicas1.png',
+            label: 'Warning',
+            images: [
+              {
+                title: 'AVISO!',
+                path: 'assets/ppi/silos/silosWarning.png'
+              }
+            ]
           },
           {
-            title: 'Emergências Médicas(2)',
-            path: 'assets/ppi/silos/silosEmergenciasMedicas2.png',
+            label: 'Emergências Médicas',
+            images: [
+              {
+                title: 'Emergências Médicas(1)',
+                path: 'assets/ppi/silos/silosEmergenciasMedicas1.png',
+              },
+              {
+                title: 'Emergências Médicas(2)',
+                path: 'assets/ppi/silos/silosEmergenciasMedicas2.png',
+              },
+            ]
           },
           {
-            title: 'Espaços Confinados(1)',
-            path: 'assets/ppi/silos/silosEspacosConfinados1.png',
+            label: 'Espaços Confinados',
+            images: [
+              {
+                title: 'Espaços Confinados(1)',
+                path: 'assets/ppi/silos/silosEspacosConfinados1.png',
+              },
+              {
+                title: 'Espaços Confinados(2)',
+                path: 'assets/ppi/silos/silosEspacosConfinados2.png',
+              },
+              {
+                title: 'Espaços Confinados(3)',
+                path: 'assets/ppi/silos/silosEspacosConfinados3.png',
+              }
+            ]
           },
           {
-            title: 'Espaços Confinados(2)',
-            path: 'assets/ppi/silos/silosEspacosConfinados2.png',
+            label: 'Incêndio Interior',
+            images: [
+              {
+                title: 'Incêndio Interior(1)',
+                path: 'assets/ppi/silos/silosIncendioInterior1.png',
+              },
+              {
+                title: 'Incêndio Interior(2)',
+                path: 'assets/ppi/silos/silosIncendioInterior2.png',
+              }
+            ]
           },
           {
-            title: 'Espaços Confinados(3)',
-            path: 'assets/ppi/silos/silosEspacosConfinados3.png',
-          },
-          {
-            title: 'Incêndio Interior(1)',
-            path: 'assets/ppi/silos/silosIncendioInterior1.png',
-          },
-          {
-            title: 'Incêndio Interior(2)',
-            path: 'assets/ppi/silos/silosIncendioInterior2.png',
-          },
-          {
-            title: 'Incêndio Fosfina',
-            path: 'assets/ppi/silos/silosIncendioFosfina.png',
+            label: 'Incêndio Fosfina',
+            images: [
+              {
+                title: 'Incêndio Fosfina',
+                path: 'assets/ppi/silos/silosIncendioFosfina.png',
+              }
+            ]
           },
         ],
       },
       {
         label: 'IKEA',
         route: 'ikea',
-        images: [],
+        subSubjects: [],
       },
       {
         label: 'Mar Shopping',
         route: 'marshopping',
-        images: [],
+        subSubjects: [],
       },
       {
         label: 'Resende',
         route: 'resende',
-        images: [],
+        subSubjects: [],
       },
       {
         label: 'Pergás',
         route: 'pergas',
-        images: [],
+        subSubjects: [],
       },
       {
         label: 'Padre Ângelo',
         route: 'padreangelo',
-        images: [],
+        subSubjects: [],
       },
     ],
   },
@@ -152,29 +191,35 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     label: 'Veículos',
     route: 'vehicles',
     expanded: false,
-    children: [
+    subjects: [
       {
         icon: '',
         label: 'Elétricos',
         route: 'eletrics',
-        images: [
+        subSubjects: [
           {
-            title: 'Baterias Lítio',
-            path: 'assets/specific/eletricvehicles/eletricVehicles.png',
+            label: 'Incêndio Fosfina',
+            images: [
+              {
+                title: 'Baterias Lítio',
+                path: 'assets/specific/eletricvehicles/eletricVehicles.png',
+              }
+            ]
           },
+
         ],
       },
       {
         icon: '',
         label: 'Hidrogénio',
         route: 'hidro',
-        images: [],
+        subSubjects: [],
       },
       {
         icon: '',
         label: 'Metro',
         route: 'metro',
-        images: [],
+        subSubjects: [],
       },
     ],
   },
@@ -183,24 +228,35 @@ export const IMAGE_GROUPS: ImageGroup[] = [
     label: 'Matérias Perigosas',
     route: 'hazmat',
     expanded: false,
-    children: [
+    subjects: [
       {
         icon: '',
         label: 'Intervenção',
         route: 'intervention',
-        images: [
+        subSubjects: [
           {
-            title: '!!REGRAS!!',
-            path: 'assets/specific/hazmat/hazmatRegras.png',
+            label: 'Warning',
+            images: [
+              {
+                title: '!!REGRAS!!',
+                path: 'assets/specific/hazmat/hazmatRegras.png',
+              }
+            ]
           },
           {
-            title: 'Intervenção(1)',
-            path: 'assets/specific/hazmat/intervencao1Hazmat.png',
+            label: 'Intervenção',
+            images: [
+              {
+                title: 'Intervenção(1)',
+                path: 'assets/specific/hazmat/intervencao1Hazmat.png',
+              },
+              {
+                title: 'Intervenção(2)',
+                path: 'assets/specific/hazmat/intervencao2Hazmat.png',
+              },
+            ]
           },
-          {
-            title: 'Intervenção(2)',
-            path: 'assets/specific/hazmat/intervencao2Hazmat.png',
-          },
+
         ],
       },
       {

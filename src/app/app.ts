@@ -37,9 +37,9 @@ export class AppComponent {
   navItems = IMAGE_GROUPS.map((group) => ({
     icon: group.icon,
     label: group.label,
-    route: group.children ? undefined : `/${group.route}`,
+    route: group.subjects ? undefined : `/${group.route}`,
     expanded: group.expanded,
-    children: group.children?.map((child) => ({
+    children: group.subjects?.map((child) => ({
       label: child.label,
       route: `/${group.route}/${child.route}`,
     })),
