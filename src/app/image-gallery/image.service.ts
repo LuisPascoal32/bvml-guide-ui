@@ -198,7 +198,7 @@ export const IMAGE_GROUPS: Subject[] = [
         route: 'eletrics',
         subSubjects: [
           {
-            label: 'Incêndio Fosfina',
+            label: 'Baterias',
             images: [
               {
                 title: 'Baterias Lítio',
