@@ -3,37 +3,83 @@
 <mat-dialog-content>
   <div class="material-info">
     <div class="info-item">
-      <label>Código Perigo:</label>
-      <span>{{ data.dangerCode }}</span>
+      <label>Guia:</label>
+      <span>{{ data.guideNr }}</span>
     </div>
     <div class="info-item">
       <label>Nr ONU:</label>
       <span>{{ data.numberUN }}</span>
     </div>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Derrame
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="material-info">
+        <div class="info-item">
+          <label>EPI</label>
+          <span>{{ data.leak.epi }}</span>
+        </div>
+        <div class="info-item">
+          <label>Isolamento</label>
+          <span>{{ data.leak.isolation }}</span>
+        </div>
+        <div class="info-item">
+          <label>Atuação</label>
+          <span>{{ data.leak.action }}</span>
+        </div>
+      </div>
+      <div class="info-item">
+        <label>Descontaminação</label>
+        <span>{{ data.leak.decontamination }}</span>
+      </div>
+    </mat-expansion-panel>
+
+        <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Incêndio
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="material-info">
+        <div class="info-item">
+          <label>EPI</label>
+          <span>{{ data.fire.epi }}</span>
+        </div>
+        <div class="info-item">
+          <label>Isolamento</label>
+          <span>{{ data.fire.isolation }}</span>
+        </div>
+        <div class="info-item">
+          <label>Atuação</label>
+          <span>{{ data.fire.action }}</span>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
     <div class="info-item">
       <label>Zona de Evacuação (Fuga/Derrame):</label>
       <div>
-        <span>{{ data.leakRange }} meters</span>
+        <span>{{ data.leak.range }} metros</span>
         <span class="legend-color" style="background-color: #ffb217"></span>
       </div>
     </div>
     <div class="info-item">
       <label>Zona de Evacuação (Incêndio):</label>
       <div>
-        <span>{{ data.fireRange }} meters</span>
+        <span>{{ data.fire.range }} metros</span>
         <span class="legend-color" style="background-color: #ff0026"></span>
       </div>
     </div>
   </div>
 
   <div class="map-wrapper">
-    <app-map
-      [leakRadius]="data.leakRange"
-      [fireRadius]="data.fireRange"
-    ></app-map>
+    <app-map [leakRadius]="data.leakRange" [fireRadius]="data.fireRange"></app-map>
   </div>
 </mat-dialog-content>
 
 <mat-dialog-actions>
-  <button mat-button (click)="close()" cdkFocusInitial>Close</button>
+  <button mat-button (click)="close()" cdkFocusInitial>Fechar</button>
 </mat-dialog-actions>

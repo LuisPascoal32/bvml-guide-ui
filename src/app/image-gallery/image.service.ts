@@ -44,7 +44,7 @@ export const IMAGE_GROUPS: ImageGroup[] = [
       },
     ],
   },
-    {
+  {
     icon: '',
     label: 'PPI',
     route: 'ppi',
@@ -54,6 +54,15 @@ export const IMAGE_GROUPS: ImageGroup[] = [
         label: 'Silos Leixões',
         route: 'silosleixoes',
         images: [
+          { title: 'AVISO!', path: 'assets/ppi/silos/silosWarning.png' },
+          { title: 'Emergências Médicas(1)', path: 'assets/ppi/silos/silosEmergenciasMedicas1.png' },
+          { title: 'Emergências Médicas(2)', path: 'assets/ppi/silos/silosEmergenciasMedicas2.png' },
+          { title: 'Espaços Confinados(1)', path: 'assets/ppi/silos/silosEspacosConfinados1.png' },
+          { title: 'Espaços Confinados(2)', path: 'assets/ppi/silos/silosEspacosConfinados2.png' },
+          { title: 'Espaços Confinados(3)', path: 'assets/ppi/silos/silosEspacosConfinados3.png' },
+          { title: 'Incêndio Interior(1)', path: 'assets/ppi/silos/silosIncendioInterior1.png' },
+          { title: 'Incêndio Interior(2)', path: 'assets/ppi/silos/silosIncendioInterior2.png' },
+          { title: 'Incêndio Fosfina', path: 'assets/ppi/silos/silosIncendioFosfina.png' },
         ],
       },
       {
@@ -90,22 +99,44 @@ export const IMAGE_GROUPS: ImageGroup[] = [
   },
   {
     icon: '',
-    label: 'Específicos',
-    route: 'specific',
+    label: 'Veículos',
+    route: 'vehicles',
     expanded: false,
     children: [
       {
         icon: '',
-        label: 'Veículos Elétricos',
-        route: 'veiculoseletricos',
+        label: 'Elétricos',
+        route: 'eletrics',
         images: [
           { title: 'Baterias Lítio', path: 'assets/specific/eletricvehicles/eletricVehicles.png' },
         ],
       },
+            {
+        icon: '',
+        label: 'Hidrogénio',
+        route: 'hidro',
+        images: [
+        ],
+      },
+            {
+        icon: '',
+        label: 'Metro',
+        route: 'metro',
+        images: [
+        ],
+      },
+    ],
+  },
+  {
+    icon: '',
+    label: 'Matérias Perigosas',
+    route: 'hazmat',
+    expanded: false,
+    children: [
       {
         icon: '',
-        label: 'HAZMAT',
-        route: 'heavy',
+        label: 'Intervenção',
+        route: 'intervention',
         images: [
           { title: '!!REGRAS!!', path: 'assets/specific/hazmat/hazmatRegras.png' },
           { title: 'Intervenção(1)', path: 'assets/specific/hazmat/intervencao1Hazmat.png' },
@@ -113,8 +144,8 @@ export const IMAGE_GROUPS: ImageGroup[] = [
       },
       {
         icon: 'assets/hazmat/hazmat.ico',
-        label: 'Matérias Perigosas',
-        route: 'materias-perigosas'
+        label: 'Nr ONU',
+        route: 'onu'
       }
     ]
   }

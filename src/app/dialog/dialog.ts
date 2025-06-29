@@ -5,6 +5,7 @@ import { MAT_DIALOG_DATA, MatDialogActions, MatDialogContent, MatDialogRef, MatD
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MapComponent } from '../map/map';
+import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-dialog',
@@ -18,7 +19,8 @@ import { MapComponent } from '../map/map';
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
-    MapComponent
+    MapComponent,
+    MatExpansionModule
   ],
 })
 export class DialogComponent {

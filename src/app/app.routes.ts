@@ -5,7 +5,7 @@ import { ImageGalleryComponent } from './image-gallery/image-gallery';
 import { SearchListComponent } from './search-list/search-list';
 
 export const appRoutes: Routes = [
-  { path: 'specific/materias-perigosas', component: SearchListComponent },
+  { path: 'hazmat/onu', component: SearchListComponent },
   { path: ':section/:subSection', component: ImageGalleryComponent },
   { path: 'pre-hospitalar', component: ChecklistComponent },
   { path: ':section', component: ImageGalleryComponent },
