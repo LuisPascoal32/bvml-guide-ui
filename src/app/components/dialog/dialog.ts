@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogActions, MatDialogContent, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { AlertComponent } from "../alert/alert";
 import { MapComponent } from '../map/map';
-import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-dialog',
@@ -20,8 +21,9 @@ import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansi
     MatDialogContent,
     MatDialogActions,
     MapComponent,
-    MatExpansionModule
-  ],
+    MatExpansionModule,
+    AlertComponent
+],
 })
 export class DialogComponent {
   readonly dialogRef = inject(MatDialogRef<DialogComponent>);

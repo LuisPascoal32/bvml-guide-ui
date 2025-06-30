@@ -1,0 +1,24 @@
+.alert-container {
+  background-color: oklch(0.205 0 0);
+  color: #ff6568;
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  align-items: center;
+  padding: 1rem 0.75rem;
+  border: 0.0625rem solid oklch(1 0 0 / 10%);
+  border-radius: 0.625rem;
+
+  mat-icon {
+    transform: scale(0.85);
+  }
+
+  .alert-title {
+    font-size: 1rem;
+    font-weight: bold;
+    grid-column-start: 2;
+  }
+
+  .alert-message {
+    grid-column-start: 2;
+  }
+}
