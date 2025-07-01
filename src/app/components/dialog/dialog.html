@@ -14,49 +14,53 @@
     </div>
 
     <div class="info-columns">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title> Derrame </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="material-info">
-          <div class="info-item">
-            <label>EPI</label>
-            <span>{{ data.leak.epi }}</span>
+      <mat-accordion [multi]="true">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Derrame </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="material-info">
+            <div class="info-item">
+              <label>EPI</label>
+              <span>{{ data.leak.epi }}</span>
+            </div>
+            <div class="info-item">
+              <label>Isolamento</label>
+              <span>{{ data.leak.isolation }}</span>
+            </div>
+            <div class="info-item">
+              <label>Atuação</label>
+              <span>{{ data.leak.action }}</span>
+            </div>
           </div>
           <div class="info-item">
-            <label>Isolamento</label>
-            <span>{{ data.leak.isolation }}</span>
+            <label>Descontaminação</label>
+            <span>{{ data.leak.decontamination }}</span>
           </div>
-          <div class="info-item">
-            <label>Atuação</label>
-            <span>{{ data.leak.action }}</span>
-          </div>
-        </div>
-        <div class="info-item">
-          <label>Descontaminação</label>
-          <span>{{ data.leak.decontamination }}</span>
-        </div>
-      </mat-expansion-panel>
+        </mat-expansion-panel>
+      </mat-accordion>
 
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title> Incêndio </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div class="material-info">
-          <div class="info-item">
-            <label>EPI</label>
-            <span>{{ data.fire.epi }}</span>
+      <mat-accordion [multi]="true">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title> Incêndio </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="material-info">
+            <div class="info-item">
+              <label>EPI</label>
+              <span>{{ data.fire.epi }}</span>
+            </div>
+            <div class="info-item">
+              <label>Isolamento</label>
+              <span>{{ data.fire.isolation }}</span>
+            </div>
+            <div class="info-item">
+              <label>Atuação</label>
+              <span>{{ data.fire.action }}</span>
+            </div>
           </div>
-          <div class="info-item">
-            <label>Isolamento</label>
-            <span>{{ data.fire.isolation }}</span>
-          </div>
-          <div class="info-item">
-            <label>Atuação</label>
-            <span>{{ data.fire.action }}</span>
-          </div>
-        </div>
-      </mat-expansion-panel>
+        </mat-expansion-panel>
+      </mat-accordion>
 
       <div class="info-item">
         <label>Zona de Evacuação (Fuga/Derrame):</label>
