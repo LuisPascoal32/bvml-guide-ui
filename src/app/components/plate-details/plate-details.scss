@@ -54,32 +54,32 @@ mat-dialog-content {
     .title {
       font-size: 1.2rem;
     }
-
-    .legend-color {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      display: inline-block;
-      margin-right: 8px;
-    }
-
-    .info-map {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    label {
-      font-weight: 600;
-      color: #c9c9c9;
-      margin-bottom: 0.2rem;
-    }
-
-    span {
-      font-size: 0.95rem;
-      color: #a3a3a3;
-    }
   }
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.info-map {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: #c9c9c9;
+  margin-bottom: 0.2rem;
+}
+
+span {
+  font-size: 0.95rem;
+  color: #a3a3a3;
 }
 
 .map-wrapper {

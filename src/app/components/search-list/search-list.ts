@@ -22,11 +22,12 @@ import { PlateComponent } from '../plate/plate';
   ]
 })
 export class SearchListComponent {
-  constructor() {}
+  constructor() { }
 
   items = hazardousMaterials;
 
   searchTerm: string = '';
+  searchUrl: string = '';
 
   filteredItems() {
     if (!this.searchTerm) {
@@ -36,5 +37,10 @@ export class SearchListComponent {
     return this.items.filter((item) =>
       item.numberUN.toLowerCase().includes(term)
     );
+  }
+
+  buildSearchItem() {
+    const onuNr = this.searchTerm?.trim() || '';
+    this.searchUrl = `https://www.google.com/search?q=metérias+perigosas+ONU-${encodeURIComponent(onuNr)}`;
   }
 }

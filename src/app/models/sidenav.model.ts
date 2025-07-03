@@ -1,4 +1,5 @@
 export interface NavItem {
+  icon?:string;
   label: string;
   route: string;
   expanded?: boolean;
@@ -6,15 +7,18 @@ export interface NavItem {
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  {
+  { 
+    icon: 'home',
     label: 'Inicio',
     route: ''
   },
   {
+    icon: 'emergency',
     label: 'Pré-Hospitalar',
     route: 'pre-hospitalar',
   },
-  {
+  { 
+    icon: 'apartment',
     label: 'Urbanos',
     route: 'ui',
     expanded: false,
@@ -23,7 +27,8 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Fugas Gás', route: 'gas-leak' },
     ],
   },
-  {
+  { 
+    icon: 'note_stack',
     label: 'PPI',
     route: 'ppi',
     expanded: false,
@@ -37,6 +42,7 @@ export const NAV_ITEMS: NavItem[] = [
     ],
   },
   {
+    icon: 'electric_car',
     label: 'Veículos',
     route: 'vehicles',
     expanded: false,
@@ -46,7 +52,8 @@ export const NAV_ITEMS: NavItem[] = [
       { label: 'Metro', route: 'metro' },
     ],
   },
-  {
+  { 
+    icon: 'warning',
     label: 'Matérias Perigosas',
     route: 'hazmat',
     expanded: false,

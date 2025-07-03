@@ -1,6 +1,5 @@
 <h2 mat-dialog-title>{{ data.name }}</h2>
 <mat-dialog-content>
-  <app-alert [message]="data.warningMsg"></app-alert>
   <div class="material-info">
     <div class="info-row">
       <div class="info-item">
@@ -12,7 +11,7 @@
         <span>{{ data.numberUN }}</span>
       </div>
     </div>
-
+    <app-alert [message]="data.warningMsg"></app-alert>
     <div class="info-columns">
       <mat-accordion [multi]="true">
         <mat-expansion-panel>
@@ -65,7 +64,14 @@
           </div>
         </mat-expansion-panel>
       </mat-accordion>
+    </div>
+  </div>
 
+  <div class="map-wrapper">
+    <app-map [leakRadius]="data.leak.range" [fireRadius]="data.fire.range"></app-map>
+  </div>
+  <div class="material-info">
+    <div class="info-row">
       <div class="info-item">
         <label class="title">Zona de Evacuação (Fuga/Derrame):</label>
         <div class="info-map">
@@ -81,13 +87,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="map-wrapper">
-    <app-map
-      [leakRadius]="data.leak.range"
-      [fireRadius]="data.fire.range"
-    ></app-map>
   </div>
 </mat-dialog-content>
 

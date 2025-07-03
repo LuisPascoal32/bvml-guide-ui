@@ -2,12 +2,22 @@
   <mat-form-field appearance="outline" class="search-field">
     <mat-label>Pesquisar Nr ONU</mat-label>
     <mat-icon matPrefix>search</mat-icon>
-    <input matInput type="search" [(ngModel)]="searchTerm" placeholder="Inserir Nr ONU" />
+    <input matInput type="search" [(ngModel)]="searchTerm" placeholder="Inserir Nr ONU"  (ngModelChange)="buildSearchItem()" />
   </mat-form-field>
 
   <div class="item-container">
     @for (item of filteredItems(); track $index) {
-      <app-plate [material]="item"></app-plate>
+    <app-plate [material]="item"></app-plate>
+    }
+    @if (filteredItems().length === 0 && searchTerm) {
+   <a
+        [href]="searchUrl"
+        target="_blank"
+        rel="noopener"
+      >
+        <mat-icon>launch</mat-icon>
+        <span>Pesquisar Nr ONU</span>
+      </a>
     }
   </div>
 </mat-card>

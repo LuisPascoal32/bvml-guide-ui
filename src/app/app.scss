@@ -21,6 +21,12 @@
   }
 }
 
+.icon-list {
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
+}
+
 mat-sidenav-content {
   display: flex;
   flex-direction: column;

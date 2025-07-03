@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NavigationService } from '../../services/navigation/navigation.service';
 import { ImageDialogComponent } from '../image-dialog/image-dialog';
 import { ImageService } from './image.service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-image-gallery',
