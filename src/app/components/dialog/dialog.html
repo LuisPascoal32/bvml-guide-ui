@@ -4,11 +4,11 @@
   <div class="material-info">
     <div class="info-row">
       <div class="info-item">
-        <label>Guia:</label>
+        <label class="title">Guia:</label>
         <span>{{ data.guideNr }}</span>
       </div>
       <div class="info-item">
-        <label>Nr ONU:</label>
+        <label class="title">Nr ONU:</label>
         <span>{{ data.numberUN }}</span>
       </div>
     </div>
@@ -17,25 +17,27 @@
       <mat-accordion [multi]="true">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title> Derrame </mat-panel-title>
+            <mat-panel-title>
+              <h3>Derrame</h3>
+            </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="material-info">
             <div class="info-item">
-              <label>EPI</label>
+              <h3>EPI</h3>
               <span>{{ data.leak.epi }}</span>
             </div>
             <div class="info-item">
-              <label>Isolamento</label>
+              <h3>Isolamento</h3>
               <span>{{ data.leak.isolation }}</span>
             </div>
             <div class="info-item">
-              <label>Atuação</label>
+              <h3>Atuação</h3>
               <span>{{ data.leak.action }}</span>
             </div>
-          </div>
-          <div class="info-item">
-            <label>Descontaminação</label>
-            <span>{{ data.leak.decontamination }}</span>
+            <div class="info-item">
+              <h3>Descontaminação</h3>
+              <span>{{ data.leak.decontamination }}</span>
+            </div>
           </div>
         </mat-expansion-panel>
       </mat-accordion>
@@ -43,19 +45,21 @@
       <mat-accordion [multi]="true">
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title> Incêndio </mat-panel-title>
+            <mat-panel-title>
+              <h3>Incêndio</h3>
+            </mat-panel-title>
           </mat-expansion-panel-header>
           <div class="material-info">
             <div class="info-item">
-              <label>EPI</label>
+              <h3>EPI</h3>
               <span>{{ data.fire.epi }}</span>
             </div>
             <div class="info-item">
-              <label>Isolamento</label>
+              <h3>Isolamento</h3>
               <span>{{ data.fire.isolation }}</span>
             </div>
             <div class="info-item">
-              <label>Atuação</label>
+              <h3>Atuação</h3>
               <span>{{ data.fire.action }}</span>
             </div>
           </div>
@@ -63,14 +67,14 @@
       </mat-accordion>
 
       <div class="info-item">
-        <label>Zona de Evacuação (Fuga/Derrame):</label>
+        <label class="title">Zona de Evacuação (Fuga/Derrame):</label>
         <div class="info-map">
           <span>{{ data.leak.range }} metros</span>
           <span class="legend-color" style="background-color: #ffb217"></span>
         </div>
       </div>
       <div class="info-item">
-        <label>Zona de Evacuação (Incêndio):</label>
+        <label class="title">Zona de Evacuação (Incêndio):</label>
         <div class="info-map">
           <span>{{ data.fire.range }} metros</span>
           <span class="legend-color" style="background-color: #ff0026"></span>
