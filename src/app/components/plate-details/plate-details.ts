@@ -9,9 +9,9 @@ import { AlertComponent } from "../alert/alert";
 import { MapComponent } from '../map/map';
 
 @Component({
-  selector: 'app-dialog',
-  templateUrl: './dialog.html',
-  styleUrls: ['./dialog.scss'],
+  selector: 'app-plate-details',
+  templateUrl: './plate-details.html',
+  styleUrls: ['./plate-details.scss'],
   imports: [
     MatFormFieldModule,
     MatInputModule,
@@ -25,8 +25,8 @@ import { MapComponent } from '../map/map';
     AlertComponent
 ],
 })
-export class DialogComponent {
-  readonly dialogRef = inject(MatDialogRef<DialogComponent>);
+export class PlateDetailsComponent {
+  readonly dialogRef = inject(MatDialogRef<PlateDetailsComponent>);
   readonly data = inject(MAT_DIALOG_DATA);
 
   close() {

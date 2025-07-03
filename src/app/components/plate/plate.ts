@@ -1,7 +1,7 @@
 import { Component, inject, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { HazardousMaterial } from '../../models/hazardous-materials.model';
-import { DialogComponent } from '../dialog/dialog';
+import { PlateDetailsComponent } from '../plate-details/plate-details';
 
 @Component({
   selector: 'app-plate',
@@ -14,7 +14,7 @@ export class PlateComponent {
   private readonly dialog = inject(MatDialog);
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogComponent, {
+    const dialogRef = this.dialog.open(PlateDetailsComponent, {
       data: this.material,
       height: "100%",
       width: "100%",
