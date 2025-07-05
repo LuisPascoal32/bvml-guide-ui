@@ -37,14 +37,14 @@
       ]
     },
     {
-      "label": "Incêndio Interior",
+      "label": "Incêndio Interior Silo",
       "images": [
         {
-          "label": "Incêndio Interior(1)",
+          "label": "Incêndio Interior Silo(1)",
           "path": "assets/gallery/ppi/silos-leixoes/indoor-fire-1.png"
         },
         {
-          "label": "Incêndio Interior(2)",
+          "label": "Incêndio Interior Silo(2)",
           "path": "assets/gallery/ppi/silos-leixoes/indoor-fire-2.png"
         }
       ]
@@ -53,7 +53,7 @@
       "label": "Incêndio Fosfina",
       "images": [
         {
-          "label": "Espaços Fosfina",
+          "label": "Incêndio Fosfina",
           "path": "assets/gallery/ppi/silos-leixoes/phosphine-fire.png"
         }
       ]
