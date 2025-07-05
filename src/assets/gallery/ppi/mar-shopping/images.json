@@ -1,0 +1,19 @@
+{
+  "highlighted": [
+    {
+      "label": "Mar Shopping",
+      "path": "assets/gallery/ppi/mar-shopping/mar-shopping-cover.png"
+    }
+  ],
+  "groups": [
+    {
+      "label": "Contactos",
+      "images": [
+        {
+          "label": "Contacto",
+          "path": "assets/gallery/ppi/mar-shopping/mar-shopping-phone.png"
+        }
+      ]
+    }
+  ]
+}

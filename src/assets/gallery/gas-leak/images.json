@@ -1,0 +1,39 @@
+{
+  "groups": [
+    {
+      "label": "Conduta",
+      "images": [
+        {
+          "label": "Conduta",
+          "path": "assets/gallery/gas-leak/gas-pipe-leak.png"
+        }
+      ]
+    },
+    {
+      "label": "Habitação Horizontal",
+      "images": [
+        {
+          "label": "Atuação",
+          "path": "assets/gallery/gas-leak/gas-leak-structure.png"
+        },
+        {
+          "label": "Prioridade Avaliação",
+          "path": "assets/gallery/gas-leak/gas-leak-horizontal.png"
+        }
+      ]
+    },
+    {
+      "label": "Habitação Vertical",
+      "images": [
+        {
+          "label": "Atuação",
+          "path": "assets/gallery/gas-leak/gas-leak-structure.png"
+        },
+        {
+          "label": "Prioridade Avaliação",
+          "path": "assets/gallery/gas-leak/vertical-gas-leak.png"
+        }
+      ]
+    }
+  ]
+}

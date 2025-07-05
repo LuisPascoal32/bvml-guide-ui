@@ -5,7 +5,7 @@
       "images": [
         {
           "label": "Câmara Térmica",
-          "path": "assets/gallery/ui/equipment/thermal-camera.png"
+          "path": "assets/gallery/equipment/thermal-camera.png"
         }
       ]
     },
@@ -14,15 +14,15 @@
       "images": [
         {
           "label": "Multi Gás",
-          "path": "assets/gallery/ui/equipment/multi-gas.png"
+          "path": "assets/gallery/equipment/multi-gas.png"
         },
         {
           "label": "Multi Gás Alarme",
-          "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
+          "path": "assets/gallery/equipment/multi-gas-reference.png"
         },
         {
           "label": "Multi Gás Valores Ref.",
-          "path": "assets/gallery/ui/equipment/multi-gas-reference.png"
+          "path": "assets/gallery/equipment/multi-gas-reference.png"
         }
       ]
     }

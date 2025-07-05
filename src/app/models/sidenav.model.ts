@@ -20,12 +20,12 @@ export const NAV_ITEMS: NavItem[] = [
   {
     icon: 'build',
     label: 'Equipamentos',
-    route: 'ui/equipment',
+    route: 'equipment',
   },
   {
     icon: 'gas_meter',
     label: 'Fuga de Gás',
-    route: 'ui/gas-leak',
+    route: 'gas-leak',
   },
   {
     icon: 'note_stack',
@@ -35,7 +35,7 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { label: 'Silos Leixões', route: 'silos-leixoes' },
       { label: 'IKEA', route: 'ikea' },
-      { label: 'Mar Shopping', route: 'marshopping' },
+      { label: 'Mar Shopping', route: 'mar-shopping' },
       { label: 'Resende', route: 'resende' },
       { label: 'Pergás', route: 'pergas' },
       { label: 'Padre Ângelo', route: 'padre-angelo' },
