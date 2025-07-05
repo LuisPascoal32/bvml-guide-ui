@@ -1,10 +1,28 @@
 {
   "groups": [
     {
-      "label": "Fuga Gás",
+      "label": "Conduta",
       "images": [
         {
-          "label": "Fuga Gás",
+          "label": "Conduta",
+          "path": "assets/gallery/ui/gas-leak/gas-pipe-leak.png"
+        }
+      ]
+    },
+    {
+      "label": "Habitação Horizontal",
+      "images": [
+        {
+          "label": "Conduta",
+          "path": "assets/gallery/ui/gas-leak/gas-pipe-leak.png"
+        }
+      ]
+    },
+    {
+      "label": "Habitação Vertical",
+      "images": [
+        {
+          "label": "Conduta",
           "path": "assets/gallery/ui/gas-leak/gas-pipe-leak.png"
         }
       ]
